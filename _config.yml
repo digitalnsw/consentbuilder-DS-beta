@@ -1,0 +1,21 @@
+title: Consent Form Builder
+
+email: jessie.callaghan@finance.nsw.gov.au
+description: >- # this means to ignore newlines until "baseurl:"
+  Build your own research consent forms
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: j3_ssc
+github_username:  jcallag
+
+browserTitle: Consent Form Builder prototype
+
+stage: prototype
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+  
+remote_theme: tjharrop/NSW-jekyll-theme

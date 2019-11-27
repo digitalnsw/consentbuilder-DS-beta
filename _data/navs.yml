@@ -1,0 +1,60 @@
+sidenav:
+  -
+    title: 'Sidenav title'
+    items:
+      -
+        page: 'Basic Page'
+        url: /basic/
+        subfolderitems:
+          -
+            page: 'Child Link'
+            url: /
+          -
+            page: 'Child Link'
+            url: /
+            subsubfolderitems:
+              -
+                page: 'Grandchild Link'
+                url: /
+              -
+                page: 'Grandchild Link'
+                url: /
+          -
+            page: 'Child Link'
+            url: /
+      -
+        page: 'Form page'
+        url: /form/
+        subfolderitems:
+          -
+            page: 'Child Link'
+            url: /
+      -
+        page: 'Page Link'
+        url: /
+      -
+        page: 'Page Link'
+        url: /
+
+mainnav:
+  -
+    items:
+      -
+        page: 'Home'
+        url: /
+      -
+        page: 'Builder'
+        url: /builder/
+
+bottomnav:
+  -
+    items:
+      -
+        page: 'Privacy'
+        url:
+      -
+        page: 'Need Help?'
+        url:
+      -
+        page: 'Accessibility'
+        url:

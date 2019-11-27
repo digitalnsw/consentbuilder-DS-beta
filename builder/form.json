@@ -1,0 +1,677 @@
+{
+  "questions": [
+   
+    {
+      "id": "question-1",
+      "hidden": false,
+      "type": "checkbox",
+      "question": "This form builder is only a prototype, before using our consent forms in your research you'll need to check in with your legal or privacy team.  It may not have everything you need.",
+      "options": [
+        {
+          "id": "question-1-a",
+          "label": "I understand I must check in with my legal and privacy team",
+          "actions": {
+            "question": null,
+            "clause": "clause-understand"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-1.1",
+      "hidden": false,
+      "question": "Will you be doing some form of ethics process before you start your research?",
+      "options": [
+        {
+          "id": "question-1.1-a",
+          "label": "Yes, a full ethics process an ethics committe",
+          "actions": {
+            "question": null,
+            "clause": null
+          }
+        },
+        {
+          "id": "question-1.1-b",
+          "label": "Yes, an ethics assessment for internal review",
+          "actions": {
+            "question": null,
+            "clause": null
+          }
+        },
+        {
+          "id": "question-1.1-c",
+          "label": "Yes, a data ethics canvas exercise or a consequence scanning workshop",
+          "actions": {
+            "question": null,
+            "clause": null
+          }
+        },
+        {
+          "id": "question-1.1-d",
+          "label": "No, we won't do any sort of ethics process",
+          "actions": {
+            "question": null,
+            "clause": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2-store-secure",
+      "hidden": false,
+      "question": "Will personal information be stored with notes or audio recordings, or will they be stored separately?",
+      "options": [
+        {
+          "id": "question-2-store-secure-a",
+          "label": "Personal information will be stored separately to notes",
+          "actions": {
+            "question": null,
+            "clause": null
+          }
+        },
+        {
+          "id": "question-2-store-secure-b",
+          "label": "Personal information and notes may be stored in the same place, but not in a way that would easily link notes to a particular person (eg. notes will not have a participant's name on them)",
+          "actions": {
+            "question": null,
+            "clause": null
+          }
+        },
+        {
+          "id": "question-2-store-secure-c",
+          "label": "We'll have notes and people's personal information stored together, it might be easy to link names to comments.",
+          "actions": {
+            "question": "question-privacy",
+            "clause": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2-privacy",
+      "hidden": true,
+      "question": "Is there a strong reason behind storing personal information with notes? Anonymising notes as we write them and keeping personal information seperate to notes can help protect privacy.",
+      "options": [
+        {
+          "id": "question-2-privacy-a",
+          "label": "Yes, there is a good reason to be storing personal information with notes",
+          "actions": {
+            "question": null,
+            "clause": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2",
+      "hidden": false,
+      "question": "How will you be recording the conversation?",
+      "type": "checkbox",
+      "options": [
+        {
+          "id": "question-2-a",
+          "label": "Video",
+          "actions": {
+            "question": "question-2a-extra-video",
+            "clause": null
+          }
+        },
+        {
+          "id": "question-2-b",
+          "label": "Audio",
+          "actions": {
+            "question": "question-2a-extra-audio",
+            "clause": null
+          }
+        },
+        {
+          "id": "question-2-c",
+          "label": "Written notes",
+          "actions": {
+            "question": "question-2c-extra-notes",
+            "clause": null
+          }
+        },
+        {
+          "id": "question-2-d",
+          "label": "Photos",
+          "actions": {
+            "question": "question-2d-extra",
+            "clause": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2a-extra-video",
+      "hidden": true,
+      "question": "Will you share the video recordings with anyone outside the research team?",
+      "options": [
+        {
+          "id": "question-2a-extra-video-a",
+          "label": "No",
+          "actions": {
+            "question": "question-2a-extra-video-extra-extra",
+            "clause": "video-no-share"
+          }
+        },
+        {
+          "id": "question-2a-extra-video-b",
+          "label": "We may share them with people inside our organisation (eg. stakeholders or executives).",
+          "actions": {
+            "question": "question-2a-extra-video-extra-extra",
+            "clause": "video-internal-share"
+          }
+        },
+        {
+          "id": "question-2a-extra-video-c",
+          "label": "We may share them with people inside and outside our organisation (eg. other government agencies, companies we're working with).",
+          "actions": {
+            "question": "question-2a-extra-video-extra",
+            "clause": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2a-extra-video-extra",
+      "hidden": true,
+      "question": "When you share them, will you send them copies of the video they can keep or will you just show them as part of a presentation? This form doesn't cover sharing copies of videos outside your organisation.",
+      "options": [
+        {
+          "id": "question-2a-extra-video-extra-a",
+          "label": "Show them",
+          "actions": {
+            "question": "question-2a-extra-video-extra-extra",
+            "clause": "show-video"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2a-extra-video-extra-extra",
+      "hidden": true,
+      "question": "Will the videos be stored securely?",
+      "options": [
+        {
+          "id": "question-2a-extra-video-extra-extra-a",
+          "label": "Yes, they'll be stored somewhere with restricted access (eg. only a small number of people can access)",
+          "actions": {
+            "question": "question-2aa-extra-video-extra-extra",
+            "clause": "clause-video-secure"
+          }
+        },
+        {
+          "id": "question-2a-extra-video-extra-extra-b",
+          "label": "Yes, they'll be stored somewhere relatively restricted",
+          "actions": {
+            "question": "question-2aa-extra-video-extra-extra",
+            "clause": "clause-video-restricted"
+          }
+        },
+        {
+          "id": "question-2a-extra-video-extra-extra-c",
+          "label": "They'll be stored in a place that lots of people can access them and see them",
+          "actions": {
+            "question": "question-2aa-extra-video-extra-extra",
+            "clause": "clause-video-unsecure"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2aa-extra-video-extra-extra",
+      "hidden": true,
+      "question": "Will you keep them for future use in other research projects?",
+      "options": [
+        {
+          "id": "question-2aa-extra-video-extra-extra-a",
+          "label": "Yes",
+          "actions": {
+            "question": null,
+            "clause": "video-reuse"
+          }
+        },
+        {
+          "id": "question-2aa-extra-video-extra-extra-b",
+          "label": "No, we'll only use them once",
+          "actions": {
+            "question": null,
+            "clause": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2a-extra-audio",
+      "hidden": true,
+      "question": "Will you share the audio recordings with anyone outside the research team?",
+      "options": [
+        {
+          "id": "question-2a-extra-audio-a",
+          "label": "No",
+          "actions": {
+            "question": "question-2a-extra-audio-extra",
+            "clause": "audio-no-share"
+          }
+        },
+        {
+          "id": "question-2a-extra-audio-b",
+          "label": "We may share them with people inside our organisation (eg. stakeholders or executives).",
+          "actions": {
+            "question": "question-2a-extra-audio-extra",
+            "clause": "audio-internal-share"
+          }
+        },
+        {
+          "id": "question-2a-extra-audio-c",
+          "label": "We might share them with people inside and outside our organisation (eg. other government agencies, companies we're working with).",
+          "actions": {
+            "question": "question-2a-extra-audio-extra",
+            "clause": "audio-external-share"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2a-extra-audio-extra",
+      "hidden": true,
+      "question": "When you share them, will you send them copies of the audio they can keep or will you just show them as part of a presentation? This form currently doesn't cover sending copies.",
+      "options": [
+        {
+          "id": "question-2a-extra-audio-extra-a",
+          "label": "Show them in a presentation",
+          "actions": {
+            "question": "question-2a-extra-audio-extra-transcribe",
+            "clause": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2a-extra-audio-extra-transcribe",
+      "hidden": true,
+      "question": "Will you use a transcription service to transcribe audio into notes? For example, Rev or Otter.",
+      "options": [
+        {
+          "id": "question-2a-extra-audio-extra-transcribe-a",
+          "label": "Yes",
+          "actions": {
+            "question": "question-2a-extra-audio-extra-extra",
+            "clause": "transcribe"
+          }
+        },
+        {
+          "id": "question-2a-extra-audio-extra-transcribe-b",
+          "label": "Yes, but we'll delete the audio file from the application when we're done",
+          "actions": {
+            "question": "question-2a-store",
+            "clause": "transcribe-delete"
+          }
+        },
+        {
+          "id": "question-2a-extra-audio-extra-transcribe-c",
+          "label": "No, we won't use a transcription service",
+          "actions": {
+            "question": "question-2a-store",
+            "clause": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2a-store",
+      "hidden": true,
+      "question": "Will the audio recordings be stored securely?",
+      "options": [
+        {
+          "id": "question-2a-store-a",
+          "label": "Yes, they'll be stored somewhere with restricted access (eg. only a small number of people can access)",
+          "actions": {
+            "question": "question-2a-audio-reuse",
+            "clause": "clause-audio-secure"
+          }
+        },
+        {
+          "id": "question-2a-store-b",
+          "label": "Yes, they'll be stored somewhere relatively restricted",
+          "actions": {
+            "question": "question-2a-audio-reuse",
+            "clause": "clause-audio-restricted"
+          }
+        },
+        {
+          "id": "question-2a-store-c",
+          "label": "They'll be stored in a place that lots of people can access them and see them",
+          "actions": {
+            "question": "question-2a-audio-reuse",
+            "clause": "clause-audio-unsecure"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2a-audio-reuse",
+      "hidden": true,
+      "question": "Will you keep the recordings for future use in other research projects?",
+      "options": [
+        {
+          "id": "question-2a-audio-reuse-a",
+          "label": "Yes",
+          "actions": {
+            "question": null,
+            "clause": "audio-reuse"
+          }
+        },
+        {
+          "id": "question-2a-extra-audio-extra-extra-b",
+          "label": "No, we'll only use them once",
+          "actions": {
+            "question": null,
+            "clause": null
+          }
+        }
+      ] 
+    },
+    {
+      "id": "question-2d-extra-photo",
+      "hidden": true,
+      "question": "Will you share the photos with anyone outside the research team?",
+      "options": [
+        {
+          "id": "question-2d-extra-photo-a",
+          "label": "No",
+          "actions": {
+            "question": "question-2a-extra-extra-extra-photo",
+            "clause": null
+          }
+        },
+        {
+          "id": "question-2d-extra-photo-b",
+          "label": "We may share them with people inside our organisation (eg. stakeholders or executives).",
+          "actions": {
+            "question": "question-2d-extra-photo-extra",
+            "clause": null
+          }
+        },
+        {
+          "id": "question-2d-extra-photo-c",
+          "label": "We may share them with people inside and outside our organisation (eg. other government agencies, companies we're working with).",
+          "actions": {
+            "question": "question-2d-extra-photo-extra",
+            "clause": null
+          }
+        },
+        {
+          "id": "question-2d-extra-photo-d",
+          "label": "We may publish the photos",
+          "actions": {
+            "question": "question-2d-extra-photo-extra",
+            "clause": "clause-non-disclosure-photo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2d-extra-photo-extra",
+      "hidden": true,
+      "question": "When you share them, will you send them copies of the photos they can keep or will you just show them as part of a presentation?",
+      "options": [
+        {
+          "id": "question-2d-extra-photo-extra-a",
+          "label": "Show them",
+          "actions": {
+            "question": "question-2d-extra-photo-extra-extra",
+            "clause": "clause-show-photo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2d-extra-photo-extra-extra",
+      "hidden": true,
+      "question": "Will you keep them for future use in other research projects?",
+      "options": [
+        {
+          "id": "question-2d-extra-photo-extra-extra-a",
+          "label": "Yes",
+          "actions": {
+            "question": null,
+            "clause": "photo-reuse"
+          }
+        },
+        {
+          "id": "question-2d-extra-photo-extra-extra-b",
+          "label": "No, we'll only use them once",
+          "actions": {
+            "question": null,
+            "clause": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2c-extra-notes",
+      "hidden": true,
+      "question": "Will you share the notes with anyone?",
+      "options": [
+        {
+          "id": "question-2c-extra-a",
+          "label": "No, only the project team will use the notes",
+          "actions": {
+            "question": "question-2c-extra-c-reuse",
+            "clause": "notes-no-share"
+          }
+        },
+        {
+          "id": "question-2c-extra-b",
+          "label": "Yes, we may share anonymised notes inside and/or outside the organisation",
+          "actions": {
+            "question": "question-2c-extra-c-reuse",
+            "clause": "notes-anon"
+          }
+        },
+        {
+          "id": "question-2c-extra-c",
+          "label": "Yes, we may share notes that contain personal information with people inside our organisation",
+          "actions": {
+            "question": "question-2c-extra-c-reuse",
+            "clause": "notes-identified"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2c-extra-c-reuse",
+      "hidden": true,
+      "question": "Will you keep the notes for future use in other research projects?",
+      "options": [
+        {
+          "id": "question-2c-extra-c-reuse-a",
+          "label": "Yes, we'll keep the notes for future use",
+          "actions": {
+            "question": "question-2c-notes-storage",
+            "clause": "notes-reuse"
+          }
+        },
+        {
+          "id": "question-2c-extra-c-reuse-c",
+          "label": "No, we'll only use them once",
+          "actions": {
+            "question": "question-2c-notes-storage",
+            "clause": null          
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2c-notes-storage",
+      "hidden": true,
+      "question": "Will notes be stored securely?",
+      "options": [
+        {
+          "id": "question-2c-notes-storage-a",
+          "label": "Yes, they will be stored somewhere with restricted access (eg. only a few people will have access to them)",
+          "actions": {
+            "question": null,
+            "clause": "notes-secure"
+          }
+        },
+        {
+          "id": "question-2c-notes-storage-c",
+          "label": "No, they will be stored where lots of people can access them",
+          "actions": {
+            "question": null,
+            "clause": "notes-unsecure"          
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2-storage-length",
+      "hidden": false,
+      "question": "How long will you keep the research for?",
+      "options": [
+        {
+          "id": "question-2-storage-length-a",
+          "label": "2 years",
+          "actions": {
+            "question": null,
+            "clause": "keep-2yrs"
+          }
+        },
+        {
+          "id": "question-2-storage-length-b",
+          "label": "5 years",
+          "actions": {
+            "question": null,
+            "clause": "keep-5yrs"
+          }
+        },
+        {
+          "id": "question-2-storage-length-c",
+          "label": "7 years",
+          "actions": {
+            "question": null,
+            "clause": "keep-7yrs"
+          }
+        },
+        {
+          "id": "question-2-storage-length-d",
+          "label": "Indefinetly",
+          "actions": {
+            "question": null,
+            "clause": "keep-forever"
+          }
+        },
+        {
+          "id": "question-2-storage-length-e",
+          "label": "Not sure",
+          "actions": {
+            "question": null,
+            "clause": "keep-forever"         
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-2-publish",
+      "hidden": false,
+      "question": "Do you want to publish any of the research anonymously, including anonymous quotes or excerpts from notes?",
+      "options": [
+        {
+          "id": "question-2-publish-a",
+          "label": "Yes",
+          "actions": {
+            "question": null,
+            "clause": "clause-publish"
+          }
+        },
+        {
+          "id": "question-2-publish-b",
+          "label": "No",
+          "actions": {
+            "question": null,
+            "clause": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-3",
+      "hidden": false,
+      "question": "Do you want to follow up with participants after the session to clarify anything?",
+      "options": [
+        {
+          "id": "question-3-a",
+          "label": "Yes",
+          "actions": {
+            "question": null,
+            "clause": "clause-follow"
+          }
+        },
+        {
+          "id": "question-3-b",
+          "label": "No",
+          "actions": {
+            "question": null,
+            "clause": null          
+          }
+        }
+      ]
+    },
+    {
+      "id": "question-4-optional",
+      "hidden": false,
+      "question": "We've added all the mandatory parts, but there are some optional parts you might want to add. Would you like to see the optional parts?",
+      "options": [
+        {
+          "id": "question-4-optional-a",
+          "label": "Show me the optional parts",
+          "actions": {
+            "question": null,
+            "clause": "clause-optional"
+          }
+        }
+      ]
+    }
+  ],
+  "clauses": {
+    "clause-understand": "<h1> Research study title </h1><h2>Overview</h2><p>We’re asking people for help to [describe high level strategic goal of project in a sentence].</p><p>The research team works for the [organisation]. The person you’ll be speaking to is [name of researcher/s].</p><h2>Your rights</h2><p>Taking part in the research is completely voluntary. You can leave at any time or decide not to answer certain questions without giving a reason. You can stop taking part in this research at any time. Even after we finish the interview. If you need to do this, please call or email us at:</p> <p>[Insert phone]</p><p>[Insert email]</p><p>You can also email or call us if you have any questions about the research. You can also ask to see the information we hold about you. If any of the personal information we hold about you is wrong, you can ask us to fix it.</p><p>If you need to make a complaint about the research, you can speak to someone from outside the research team. If you need to do this, please call or email:</p> <p>[Insert phone]</p><p>[Insert email]</p></p><p>Find out more about your rights at: www.ipc.nsw.gov.au/guide-privacy-laws-nsw</p><h2>How we’ll use your information</h2><p>The information you give us will be used to help make our products and services better.</p>",
+    "keep-2yrs": "We may keep some of what you tell us for up to 2 years.",
+    "keep-5yrs": "We may keep some of what you tell us for up to 5 years.",
+    "keep-7yrs": "We may keep some of what you tell us for up to 7 years.",
+    "keep-forever": "We may keep some of what you tell us for a very long time. We may keep it for more than 7 years.",
+    "video-no-share": "<h2> How we'll use video recordings </h2><h3>Sharing recordings</h3><p>If we record the conversation, we won’t share it with anyone.</p><p> Yes ----  No </p>",
+    "video-internal-share": "<h2> How we'll use video recordings </h2><h3>Sharing recordings</h3><p>If we record the conversation, we may share it with people inside our organisation. We do this so people can hear your story in your own words.</p><p> Yes ----  No </p>",
+    "show-video": "<h2> How we'll use video recordings </h2><h3>Sharing recordings</h3><p>If we record the conversation, we may share it with people inside and outside our organisation. We do this so people can hear your story in your own words.</p><p> Yes ----  No </p>",
+    "clause-video-secure": "<h3>Storing recordings</h3><p>We'll store it on our computer systems. We'll store it in a place that is as secure as possible and we'll limit how many people can see it.</p>",
+    "clause-video-restricted": "<h3>Storing recordings</h3><p>We'll store it on our computer systems. We'll store it in a place that is as securely as possible, but a limitted number of people outside the research team might be able to see it.</p>",
+    "clause-video-unsecure": "<h3>Storing recordings</h3><p>We'll store it on our computer systems. We'll store it as securely as possible, but it may be kept where people outside the research team can see it. However, only people who working for us will be able to see it.</p>",
+    "clause-publish": "<p>We may publish some of the things you tell us. Anything we publish won't have information about who you are in it. We won’t publish audio recordings. We do this so others can make use of what you told us, and help make services better.</p><p> Yes ----  No </p>",
+    "clause-reuse": "<p>We may reuse some of what you tell us in future research. We do this so other research teams will be able to learn from what you tell us. If you agree to this but change your mind about being part of the research at a later date, we’ll do our best to remove your answers from our research. However, it may not be possible to remove all copies.</p><p> Yes ----  No </p>",
+    "video-reuse": "<h3> Reusing recordings </h3><p>We may reuse the recordings in future research. We do this so other research teams will be able to learn from what you tell us. If you agree to this but change your mind about being part of the research at a later date, we’ll do our best to remove all copies of this recording. However, it may not be possible to remove all copies.</p><p> Yes ----  No </p>",
+    "audio-no-share": "<h2> How we'll use audio recordings </h2><h3>Sharing recordings</h3><p>If we record the conversation, we won’t share it with anyone.</p>",
+    "audio-internal-share": "<h2> How we'll use audio recordings </h2><h3>Sharing recordings</h3><p>If we record the conversation, we may share it with people inside our organisation. We do this so people can hear your story in your own words.</p><p> Yes ----  No </p>",
+    "audio-external-share": "<h2> How we'll use audio recordings </h2><h3>Sharing recordings</h3><p>If we record the conversation, we may share it with people inside and outside our organisation. We do this so people can hear your story in your own words.</p><p> Yes ----  No </p>",
+    "clause-audio-secure": "<h3>Storing recordings</h3><p>We'll store it on our computer systems. We'll store it in a place that is as secure as possible and we'll limit how many people can see it.</p>",
+    "clause-audio-restricted": "<h3>Storing recordings</h3><p>We'll store it on our computer systems. We'll store it in a place that is as securely as possible, but a limitted number of people outside the research team might be able to see it.</p>",
+    "clause-audio-unsecure": "<h3>Storing recordings</h3><p>We'll store it on our computer systems. We'll store it as securely as possible, but it may be kept where people outside the research team can see it. However, only people who working for us will be able to see it.</p>",
+    "transcribe": "<h3>Transcription Service</h3><p>We may use a transcription service to turn the audio recording into notes. This means a copy of the recording will be stored on the transcription service's computer systems.</p><p> Yes ----  No </p>",
+    "transcribe-delete": "<h3>Transcription Service</h3><p>We may use a transcription service to turn the audio recording into notes. We'll delete the recordings from the transcription service once the notes have been transcribed.</p><p> Yes ----  No </p>",
+    "clause-non-disclosure-photo": "<p>This form does not currently cover publication of photos. If you need to do this, please check in with your legal and privacy teams.</p>",
+    "audio-reuse": "<h3>Reusing recordings</h3><p>We may reuse the recordings in future research. We do this so other research teams will be able to learn from what you tell us. If you agree to this but change your mind about being part of the research at a later date, we’ll do our best to remove all copies of this recording. However, it may not be possible to remove all copies.</p><p> Yes ----  No </p>",
+    "notes-no-share": "<h2> How we'll use written notes </h2><h3>Sharing notes</h3><p>If we write notes of the conversation, but we won’t share them with anyone outside the research team.</p>",
+    "notes-anon": "<h2> How we'll use written notes </h2><h3>Sharing notes</h3><p>If we write notes of the conversation, we may share some of the things you tell us with people inside and outside our organisation. Any notes we share won't have information about who you are.</p><p> Yes ----  No </p>",
+    "notes-identified": "<h2> How we'll use written notes </h2><h3>Sharing notes</h3><p>If we write notes of the conversation, we may share some of the things you tell us with people inside our organisation. Some of the notes we share may have information about who you are in them. We do this so others can make use of what you told us, and help make services better.</p><p> Yes ----  No </p>",
+    "notes-reuse": "<h3> Reusing notes </h3><p>We may reuse some of what you tell us in future research. We do this so other research teams will be able to learn from what you tell us. If you agree to this but change your mind about being part of the research at a later date, we’ll do our best to remove your answers from our research. However, it may not be possible to remove all copies.</p><p> Yes ----  No </p>",
+    "notes-secure": "<h3>Storing notes</h3><p>We'll store notes on our computer systems. We'll store them in a place that is as secure as possible and we'll limit how many people can see it.</p>",
+    "notes-unsecure": "<h3>Storing notes</h3><p>We'll store notes on our computer systems. We'll store them as securely as possible, but it may be kept where people outside the research team can see it. However, only people who working for us will be able to see it.</p>",
+    "clause-video": "<p>We'd like to record video of the conversation</p><p> Yes ----  No </p>",
+    "clause-audio": "<p>We'd like to record audio of the conversation</p><p> Yes ----  No </p>",
+    "clause-notes": "<p>We may write notes of the conversation</p><p> Yes ----  No </p>",
+    "clause-photos": "<p>We'd like to take a few photos of you</p><p> Yes ----  No </p>",
+    "clause-follow": "<p>After the interview we may ask you a few more questions by email</p><p> Yes ----  No </p>",
+    "clause-optional": "<p>The below parts are optional and don’t need to be added into the consent form. But they might suit your needs. If you’re not sure how long to make your form, most information sheets/consent forms we reviewed ranged from 1.5 to 3 pages.</p><p> - You can take a break and ask us questions at any time.</p><p> - We’ve asked you to be part of the research because [insert reason for selection]. We'll also be talking to [generally describe the other types of interviewees].</p><p> - What will we be doing? We’d like to [fully explain what activities the session will entail so that the participant feels comfortable].</p><p> - What is personal information? In NSW personal information is anything that could tell people who you are. This could be things like: - your name - address - phone number - email - photos or video showing your face</p><p> - What if I feel uncomfortable or confused? If at any time before, during, or after our chat you feel that you would like to discuss any issues of a personal nature that came up, you may wish to contact Beyond Blue. Their number is 1300 22 4636. It is a toll-free, 24-hour phone service which puts you in touch with someone who can help you talk through any worries or anxiety you may be feeling. They are open 7 days.</p>"
+  }
+}

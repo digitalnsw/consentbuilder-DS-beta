@@ -1,0 +1,67 @@
+/* Your own CSS can go here to override the template */
+
+* {
+  box-sizing: border-box;
+}
+
+#builder {
+  display: flex;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+#questions, #form {
+  flex: 1;
+  width: 50%;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+#questions { border-right: 5px solid #2b8cc4; }
+#form { background: #f6f6f6; }
+
+#questions ol {
+  list-style: none;
+  padding-left: 0;
+}
+#questions li {
+  padding: .75rem 0;
+}
+
+fieldset {
+  border: none;
+}
+legend {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-bottom: .5rem;
+}
+label {
+  display: block;
+  padding: .25rem 0;
+}
+
+#form ol {
+  padding: 0.5rem;
+  border: 3px dashed #ccc;
+  min-height: 5rem;
+}
+#form li {
+  border: 1px solid #eee;
+  border-bottom: 2px solid #ddd;
+  padding: .2rem .8rem;
+  margin-bottom: .4rem;
+  background: #fff;
+}
+#form h1 {
+  margin: .5rem 0 1.5rem;
+}
+#form h2 {
+  margin: .6rem 0;
+  font-size: 1.3rem;
+}
+#form p {
+  margin: .6rem 0;
+}

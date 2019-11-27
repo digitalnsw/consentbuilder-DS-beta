@@ -1,0 +1,145 @@
+---
+layout: default
+---
+
+<section id="builder">
+
+  <section id="questions">
+    <!--
+      This section contains all the questions.
+
+      Each question can contain as many options as needed. All options for a
+      question should share the same "name" attribute.
+
+      The "data-clause" attribute is the ID of the clause that should be
+      displayed when a user chooses this option.
+    -->
+    <ol>
+    </ol>
+  </section>
+
+  <section id="form">
+    <!--
+    This <section> is for the completed form.
+
+      It contains all possible clauses, each identified with a different ID.
+
+      The JavaScript code below automatically turns each clause on or off based
+      on the options chosen by the user.
+    -->
+    <h1>Your form</h1>
+    <ol>
+    </ol>
+  </section>
+</section>
+
+<script type="text/javascript" src="deserialize.js"></script>
+<script type="text/javascript">
+  var questionList = document.querySelector('#questions ol')
+  var clauseList = document.querySelector('#form ol')
+
+  var initialize = function(){
+
+    // Make arrays of all the questions and clauses
+    var questions = document.querySelectorAll('#questions li')
+    var clauses = document.querySelectorAll('#form li')
+    var hiddenQuestions = document.querySelectorAll('#questions li[data-hidden-question]')
+
+    // Define a few quick functions for dealing with clauses
+    var hideElement = function(el) {
+      el.style.display = 'none'
+    }
+    var showElement = function(el) {
+      el.style.display = 'block'
+    }
+
+    var findClause = function(clauseID) {
+      // Look up the clause by its HTML element ID
+      return document.querySelector('#form li#'+ clauseID)
+    }
+    var findQuestion = function(questionID) {
+      // Look up the clause by its HTML element ID
+      return document.querySelector('#questions li#'+ questionID)
+    }
+
+    var clearQuestion = function(question) {
+      question.querySelectorAll('input').forEach(function(input){
+        input.checked = false
+      })
+    }
+
+    var buildForm = function() {
+      // Hide all clauses to start
+      clauses.forEach(hideElement)
+
+      // Hide all hidden questions
+      hiddenQuestions.forEach(hideElement)
+
+      // Loop over each question
+      questions.forEach(function(question){
+
+        // Find all the selected inputs for the question
+        var checkedOptions = Array.from(
+          question.querySelectorAll('input:checked')
+        )
+
+        // Loop over each selected input fields
+        checkedOptions.forEach(function(option) {
+
+          // Get the value of the "data-clause" attribute and use the findClause method
+          // to look up the element
+          var selectedClause = findClause(
+            option.getAttribute('data-clause')
+          )
+
+          // Show the selected clause if it exists
+          if (selectedClause) {
+            showElement(selectedClause)
+          }
+
+          // Get the value of the "data-question" attribute and use the findQuestion method
+          // to look up the element
+          var selectedQuestion = findQuestion(
+            option.getAttribute('data-question')
+          )
+
+          // Show the selected question if it exists
+          if (selectedQuestion) {
+            selectedQuestion.setAttribute('data-hidden-question-active', '')
+            showElement(selectedQuestion)
+          }
+        })
+      })
+
+      // Look up which 'active' questions are now actually hidden
+      var resettableHiddenQuestions = Array.from(hiddenQuestions).filter(function(question){
+        return (question.style.display === 'none' &&
+          question.hasAttribute('data-hidden-question-active'))
+      })
+
+      if (resettableHiddenQuestions.length > 0) {
+        // Clear each question and reset the flag
+        resettableHiddenQuestions.forEach(function(question){
+          clearQuestion(question)
+          question.removeAttribute('data-hidden-question-active')
+        })
+
+        // Build the form again so that any changes caused by the cleared
+        // questions will take effect.
+        buildForm()
+      }
+
+    }
+
+    // Set up events on each question to rebuild the form every time
+    // a question is changed by the user
+    questions.forEach(function(question){
+      question.addEventListener('change', buildForm)
+    })
+
+    // Finally, build the form to start with
+    buildForm()
+  }
+
+  deserializeForm('form.json', questionList, clauseList, initialize)
+</script>
